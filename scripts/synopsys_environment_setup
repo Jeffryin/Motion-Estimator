@@ -1,0 +1,3 @@
+alias synopsys='csh -c "source /packages/synopsys/setup/synopsys_setup.tcl; exec csh -i"'
+// written inside the ~/.bashrc file inside the home directory
+// if you type 'synopsys' it'll set up the environment without typing all the commands out
