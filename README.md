@@ -15,3 +15,11 @@ Several test benches in Verilog will be developed with known vectors as well as 
 After verification of the RTL code, the design is taken to the ASIC flow starting with front-end synthesis and timing check, followed by back-end physical design involving placement, clock-tree synthesis, and routing. The parasitics will be extracted from layout for final timing check using prime-time. Efforts will be made to improve the design in terms of power consumption and area, while meeting the timing.
 
 ## References
+
+## Tools Used
+- Synopsys
+- Synopsys Design Compiler
+- PrimeTime
+
+### Side Note:
+This project is for the Advanced Digital Design class taken in San Francisco State University, and most directories are from the school server. 
