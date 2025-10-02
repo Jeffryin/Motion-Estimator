@@ -1,15 +1,16 @@
-define -library WORK -path work
+define_design_lib WORK -path work
 
 # asks for RTL directory 
 puts -nonewline "Enter Directory path: "
 flush stdout
-gets rtl_dir
+gets stdin rtl_dir
 
 #ask for RTL filename(s)
 puts -nonewline "Enter filename(s) of the RTL file: "
-gets rtl_file
+flush stdout
+gets stdin rtl_file
 
-lappend search_path rtl_dir
+lappend search_path $rtl_dir
 
 # lib_setup_14.tcl has a typo, so the actual filename is lib_steup_14.tcl
 source /packages/synopsys/setup/asic_flow_setup_14/lib_gen/lib_steup_14.tcl
@@ -24,7 +25,7 @@ if {[catch {source ./lib_container.tcl} result]} {
     }
 }
 
-analyze -library WORK -format Verilog rtl_file
-read_verilog -rtl rtl_file
+analyze -library WORK -format Verilog $rtl_file
+read_verilog -rtl $rtl_file
 
 # after this run compile 
