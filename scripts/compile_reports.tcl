@@ -4,9 +4,6 @@ gets stdin CLK_PER
 
 create_clock clk -name ideal_clock1 -period $CLK_PER
 
-compile 
-compile -incremental
-
 puts -nonewline "Choose mapping effort[high medium low]"
 flush stdout 
 gets stdin MAP_EFFORT
@@ -15,6 +12,18 @@ flush stdout
 gets stdin AREA_EFFORT
 
 compile -map_effort $MAP_EFFORT -area_effort $AREA_EFFORT 
+
+compile 
+
+puts -nonewline "Compile complete" 
+
+compile -incremental
+
+puts -nonewline "Compile incremental complete"
+
+compile -map_effort $MAP_EFFORT -area_effort $AREA_EFFORT 
+
+puts -nonewline "Compile with mapping + area effort complete"
 
 report_timing 
 
@@ -33,3 +42,5 @@ report_qor > reports/synth_qor.rpt
 report_power > reports/synth_power.rpt
 report_timing > reports/setup.rpt
 report_timing -delay min > reports/hold.rpt
+
+//should be able to start gui afterwards. with the command start_gui
