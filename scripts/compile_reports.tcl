@@ -2,7 +2,7 @@ puts -nonewline "Enter desired clock period: "
 flush stdout
 gets stdin CLK_PER
 
-create_clock clk -name ideal_clock1 $CLK_PER
+create_clock clk -name ideal_clock1 -period $CLK_PER
 
 compile 
 compile -incremental
@@ -23,8 +23,8 @@ flush stdout
 gets stdin Output_Name
 
 write_sdc ./outputs/$Output_Name.sdc
-write –f ddc –hierarchy –output ./outputs/Output_Name.ddc
-write -hierarchy -format verilog -output ./outputs/Output_Name.v
+write –f ddc –hierarchy –output ./outputs/$Output_Name.ddc
+write -hierarchy -format verilog -output ./outputs/$Output_Name.v
 
 report_area > reports/synth_area.rpt
 report_design > reports/synth_design.rpt
