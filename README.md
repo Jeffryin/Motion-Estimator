@@ -21,5 +21,11 @@ After verification of the RTL code, the design is taken to the ASIC flow startin
 - Synopsys Design Compiler
 - PrimeTime
 
+## Things Learned in the Process
+During the synthesis phase of homework assignments and the project, learned how to do the following utilizing Synopsys Design Compiler (DC):
+- adjust clock periods in order to get the fastest possible speed for the design
+- recompile incrementally after each new clock period declaration in order to read slack and timing reports
+- Figure out limits of the design in terms of clock speeds for the proposed design
+
 ### Side Note:
 This project is for the Advanced Digital Design class taken in San Francisco State University, and most directories are from the school server. 
