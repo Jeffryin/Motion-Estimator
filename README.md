@@ -16,6 +16,10 @@ After verification of the RTL code, the design is taken to the ASIC flow startin
 
 ## References
 
+## Language Used 
+- Verilog
+- tcl
+
 ## Tools Used
 - Synopsys
 - Synopsys Design Compiler
@@ -28,4 +32,5 @@ During the synthesis phase of homework assignments and the project, learned how 
 - Figure out limits of the design in terms of clock speeds for the proposed design
 
 ### Side Note:
-This project is for the Advanced Digital Design class taken in San Francisco State University, and most directories are from the school server. 
+This project is for the Advanced Digital Design class taken in San Francisco State University, and most directories are from the school server. Whatever is posted in this repository is work that I've accomplished by myself and with the help of other classmates if applicable. 
+
