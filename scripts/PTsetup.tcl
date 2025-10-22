@@ -1,0 +1,1 @@
+source /packages/synopsys/setup/asic_flow_setup_14/lib_gen/pt_lib.tcl
