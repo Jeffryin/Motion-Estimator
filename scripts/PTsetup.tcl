@@ -14,7 +14,11 @@ current_design $TOP
 
 link_design
 
-set_case_analysis 0 -in scanEn
+if {STA eq yes}{
+	set_case_analysis 1 -in scanEn
+	}elseif{
+	set_case_analysis 0 -in scanEn	
+}
 
 puts -nonewline "Enter name for reports: (PT_setup...rpt)"
 flush stdout 
