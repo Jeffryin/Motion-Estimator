@@ -2,7 +2,13 @@ puts -nonewline "Enter desired clock period: "
 flush stdout
 gets stdin CLK_PER
 
-create_clock clk -name ideal_clock1 -period $CLK_PER
+# not sure if this part works
+puts -nonewline "Enter clock name in the design" 
+flush stdout 
+gets stdin CLOCK
+
+#replaced clk with $CLOCK
+create_clock $CLOCK -name ideal_clock1 -period $CLK_PER
 
 puts -nonewline "Choose mapping effort[high medium low]"
 flush stdout 
