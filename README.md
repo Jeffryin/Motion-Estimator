@@ -24,6 +24,7 @@ After verification of the RTL code, the design is taken to the ASIC flow startin
 - Synopsys
 - Synopsys Design Compiler
 - PrimeTime
+- ICCompiler II (Physical Design)
 
 ## Things Learned in the Process
 During the synthesis phase of homework assignments and the project, learned how to do the following utilizing Synopsys Design Compiler (DC):
