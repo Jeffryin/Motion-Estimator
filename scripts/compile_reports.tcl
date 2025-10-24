@@ -2,7 +2,6 @@ puts -nonewline "Enter desired clock period: "
 flush stdout
 gets stdin CLK_PER
 
-# not sure if this part works
 puts -nonewline "Enter clock name in the design" 
 flush stdout 
 gets stdin CLOCK
