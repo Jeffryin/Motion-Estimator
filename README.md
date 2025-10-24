@@ -32,7 +32,7 @@ During the synthesis phase of homework assignments and the project, learned how 
 - recompile incrementally after each new clock period declaration in order to read slack and timing reports.
 - Figure out limits of the design in terms of clock speeds for the proposed design.
   
-During the physical design Learned how to do the following 
+During the physical design process, learned how to do the following 
 - Create a floorplan to map the logical description of the design to the physical description.
 
 ### Side Note:
