@@ -28,9 +28,12 @@ After verification of the RTL code, the design is taken to the ASIC flow startin
 
 ## Things Learned in the Process
 During the synthesis phase of homework assignments and the project, learned how to do the following utilizing Synopsys Design Compiler (DC):
-- adjust clock periods in order to get the fastest possible speed for the design
-- recompile incrementally after each new clock period declaration in order to read slack and timing reports
-- Figure out limits of the design in terms of clock speeds for the proposed design
+- adjust clock periods in order to get the fastest possible speed for the design.
+- recompile incrementally after each new clock period declaration in order to read slack and timing reports.
+- Figure out limits of the design in terms of clock speeds for the proposed design.
+  
+During the physical design Learned how to do the following 
+- Create a floorplan to map the logical description of the design to the physical description.
 
 ### Side Note:
 This project is for the Advanced Digital Design class taken in San Francisco State University, and most directories are from the school server. Whatever is posted in this repository is work that I've accomplished by myself and with the help of other classmates if applicable. 
