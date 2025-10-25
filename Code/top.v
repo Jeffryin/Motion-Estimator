@@ -7,11 +7,6 @@ module top (clock, start, BestDist, motionX, motionY, AddressR, AddressS1, Addre
 	output [3:0] motionX, motionY;
 	output completed;
 
-	wire clock;
-	wire start;
-	wire [7:0] BestDist;
-	wire [3:0] motionX, motionY;
-
 	input [7:0] R, S1, S2;
 	output [7:0] AddressR;
 	output [9:0] AddressS1, AddressS2;
@@ -269,3 +264,4 @@ module ROM_S (clock, AddressS1, AddressS2, S1, S2);
 	 end
 
 endmodule
+
