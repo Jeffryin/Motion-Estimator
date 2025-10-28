@@ -2,7 +2,7 @@ puts -nonewline "Constrain area? y/n: "
 flush stdout 
 gets stdin Area
 
-if {$AREA eq "yes"} {
+if {$Area eq "yes"} {
 	puts -nonewline "Specify Max Area: "
 	flush stdout 
 	gets stdin MA
@@ -32,8 +32,13 @@ if {$ID eq "yes"} {
 	puts -nonewline "Enter clock name: "
 	flush stdout 
 	gets stdin CLOCK
-	set_input_delay -max 23.0 -clock $CLOCK {datain}
-	set_input_delay -min 0.0 -clock $CLOCK {datain}
+
+	puts -nonewline "Enter value for input delay: "
+	flush stdout
+	gets stdin input
+
+
+	set_input_delay $input -clock $CLOCK [all_inputs]
 }
 
 puts -nonewline "Set output delay? y/n: "
@@ -44,7 +49,11 @@ if {$OD eq "yes"} {
 	puts -nonewline "Enter clock name: "
 	flush stdout 
 	gets stdin CLOCK
-	set_output_delay - max 19.0 -clock $CLOCK {dataout}
+
+	puts -nonewline "Enter value for output daly: "
+	flush stdout 
+	gets stdin output
+	set_output_delay $output -clock $CLOCK [all_outputs]
 }
 
 puts -nonewline "set max delay? y/n: "
