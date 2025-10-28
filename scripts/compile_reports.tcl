@@ -20,15 +20,15 @@ compile -map_effort $MAP_EFFORT -area_effort $AREA_EFFORT
 
 compile 
 
-puts -nonewline "Compile complete" 
+puts -nonewline "Compile complete\n" 
 
 compile -incremental
 
-puts -nonewline "Compile incremental complete"
+puts -nonewline "Compile incremental complete\n"
 
 compile -map_effort $MAP_EFFORT -area_effort $AREA_EFFORT 
 
-puts -nonewline "Compile with mapping + area effort complete"
+puts -nonewline "Compile with mapping + area effort complete\n"
 
 report_timing 
 
