@@ -29,6 +29,7 @@ After verification of the RTL code, the design is taken to the ASIC flow startin
 
 ## Things Learned in the Process
 During the synthesis phase of homework assignments and the project, learned how to do the following utilizing Synopsys Design Compiler (DC):
+- Utilize Verdi to test the functionality of the RTL code by running testbenches and generating waveforms.
 - Adjust clock periods in order to get the fastest possible speed for the design.
 - Recompile incrementally after each new clock period declaration in order to read slack and timing reports.
 - Figure out limits of the design in terms of clock speeds for the proposed design.
