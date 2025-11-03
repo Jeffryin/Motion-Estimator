@@ -21,7 +21,10 @@ flush stdout
 gets stdin TOUCH 
 
 if {$TOUCH eq "yes"} {
-	set_don’t_touch current_design
+	puts -nonewline "Enter components: "
+	flush stdout
+	gets stdin CMP
+	set_don’t_touch $CMP
 }
 
 puts -nonewline "Set input delay? y/n: "
