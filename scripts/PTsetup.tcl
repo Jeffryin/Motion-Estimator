@@ -15,7 +15,7 @@ link_design
 
 current_design
 
-puts -nonewline "STA? [yes or no]"
+puts -nonewline "STA? y/n: "
 flush stdout 
 gets stdin STA
 
