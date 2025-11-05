@@ -1,6 +1,6 @@
 source /packages/synopsys/setup/asic_flow_setup_14/lib_gen/pt_lib.tcl
 
-puts -nonewline "Enter Netlist verilog file: "
+puts -nonewline "Enter Netlist verilog file: (include .v) "
 flush stdout 
 gets stdin NET
 
@@ -13,6 +13,10 @@ gets stdin TOP
 current_design $TOP
 
 link_design
+
+puts -nonewline "STA? [yes or no]"
+flush stdout 
+gets stdin STA
 
 if {STA eq yes}{
 	set_case_analysis 1 -in scanEn
