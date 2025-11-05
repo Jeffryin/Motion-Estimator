@@ -1,18 +1,18 @@
 source /packages/synopsys/setup/asic_flow_setup_14/lib_gen/pt_lib.tcl
 
+puts -nonewline "Enter filepath where .v (Netlist) is located: "
+flush stdout
+gets stdin FP
+
 puts -nonewline "Enter Netlist verilog file: (include .v) "
 flush stdout 
 gets stdin NET
 
-read_verilog $NET
+read_verilog "$FP$NET"
 
-puts -nonewline "Enter top module: "
-flush stdout 
-gets stdin TOP
+link_design 
 
-current_design $TOP
-
-link_design
+current_design
 
 puts -nonewline "STA? [yes or no]"
 flush stdout 
