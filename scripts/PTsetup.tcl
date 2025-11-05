@@ -1,3 +1,4 @@
+# use source /home/ID#/PTsetup.tcl
 source /packages/synopsys/setup/asic_flow_setup_14/lib_gen/pt_lib.tcl
 
 puts -nonewline "Enter filepath where .v (Netlist) is located: "
