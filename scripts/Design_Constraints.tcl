@@ -1,3 +1,13 @@
+puts -nonewline "Enter clock name: "
+flush stdout 
+gets stdin CLOCK
+
+puts -nonewline "Enter period: "
+flush stdout
+gets stdin PER
+
+create_clock clock -name $CLOCK -period $PER
+
 puts -nonewline "Constrain area? y/n: "
 flush stdout 
 gets stdin Area
@@ -21,10 +31,7 @@ flush stdout
 gets stdin TOUCH 
 
 if {$TOUCH eq "yes"} {
-	puts -nonewline "Enter components: "
-	flush stdout
-	gets stdin CMP
-	set_don’t_touch $CMP
+	set_dont_touch current_design
 }
 
 puts -nonewline "Set input delay? y/n: "
@@ -32,16 +39,11 @@ flush stdout
 gets stdin ID
 
 if {$ID eq "yes"} {
-	puts -nonewline "Enter clock name: "
-	flush stdout 
-	gets stdin CLOCK
-
 	puts -nonewline "Enter value for input delay: "
 	flush stdout
 	gets stdin input
 
-
-	set_input_delay $input -clock $CLOCK [all_inputs]
+	set_input_delay $input [ remove_from_collection [all_inputs] clock ] -clock $CLOCK
 }
 
 puts -nonewline "Set output delay? y/n: "
@@ -49,14 +51,10 @@ flush stdout
 gets stdin OD
 
 if {$OD eq "yes"} {
-	puts -nonewline "Enter clock name: "
-	flush stdout 
-	gets stdin CLOCK
-
 	puts -nonewline "Enter value for output daly: "
 	flush stdout 
 	gets stdin output
-	set_output_delay $output -clock $CLOCK [all_outputs]
+	set_output_delay $output [all_outputs] -clock $CLOCK
 }
 
 puts -nonewline "set max delay? y/n: "
