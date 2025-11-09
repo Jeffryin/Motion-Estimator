@@ -1,4 +1,5 @@
-set Constraints_file "/home/920528346/outputs/3846MH.sdc"
+set Constraints_file "/home/ID-number/outputs/3846MH.sdc" 
+#set file name to the name of the file 
 
 remove_corners -all
 remove_modes -all
