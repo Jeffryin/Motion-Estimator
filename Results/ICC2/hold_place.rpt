@@ -1,0 +1,43 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -report_by design
+Design : top
+Version: S-2021.06-SP5-1
+Date   : Sat Nov  8 11:52:05 2025
+****************************************
+
+  Startpoint: R[0] (input port clocked by ideal_clock1)
+  Endpoint: pe_u/pe0/Rpipe_reg[0] (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: **in2reg_default**
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                   0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.00      0.00 r
+  R[0] (in)                                        0.00      0.00 r
+  pe_u/pe0/Rpipe_reg[0]/D (SAEDRVT14_FDP_V2LP_0P5)
+                                                   0.00      0.00 r
+  data arrival time                                          0.00
+
+  clock ideal_clock1 (rise edge)                   0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  pe_u/pe0/Rpipe_reg[0]/CK (SAEDRVT14_FDP_V2LP_0P5)
+                                                   0.00      0.00 r
+  library hold time                               -0.00     -0.00
+  data required time                                        -0.00
+  ------------------------------------------------------------------------
+  data required time                                        -0.00
+  data arrival time                                         -0.00
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.00
+
+
+1

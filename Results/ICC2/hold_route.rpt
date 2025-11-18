@@ -1,0 +1,85 @@
+Information: The stitching and editing of coupling caps is turned OFF for design 'MotionEstimator:top.design'. (TIM-125)
+Information: Design top has 1495 nets, 0 global routed, 1493 detail routed. (NEX-024)
+Warning: Technology layer 'M4' setting 'pitch' is not valid (NEX-001)
+Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
+Information: The RC mode used is DR for design 'top'. (NEX-022)
+---extraction options---
+Corner: slow
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Corner: fast
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Global options:
+ reference_direction       : use_from_tluplus
+ real_metalfill_extraction : none
+ virtual_shield_extraction : true
+---app options---
+ host.max_cores                   : 1
+ extract.connect_open           : true
+ extract.incremental_extraction : true
+ extract.enable_coupling_cap    : false
+Extracting design: top 
+Information: coupling capacitance is lumped to ground. (NEX-030)
+Information: 1493 nets are successfully extracted. (NEX-028)
+Warning: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 1493, routed nets = 1493, across physical hierarchy nets = 0, parasitics cached nets = 1493, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+ML Acceleration:                           off
+************************************************************
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -report_by design
+Design : top
+Version: S-2021.06-SP5-1
+Date   : Sat Nov  8 13:06:32 2025
+****************************************
+
+  Startpoint: comp_u/motionY_reg[3] (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: motionY[3] (output port clocked by ideal_clock1)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: **reg2out_default**
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                   0.00      0.00
+  clock network delay (propagated)                 0.00      0.00
+
+  comp_u/motionY_reg[3]/CK (SAEDRVT14_FDP_V2LP_0P5)
+                                                   0.00      0.00 r
+  comp_u/motionY_reg[3]/Q (SAEDRVT14_FDP_V2LP_0P5)
+                                                   0.03      0.03 r
+  motionY[3] (out)                                 0.00      0.03 r
+  data arrival time                                          0.03
+
+  clock ideal_clock1 (rise edge)                   0.00      0.00
+  clock network delay (propagated)                 0.02      0.02
+  output external delay                            0.00      0.02
+  data required time                                         0.02
+  ------------------------------------------------------------------------
+  data required time                                         0.02
+  data arrival time                                         -0.03
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.00
+
+
+1

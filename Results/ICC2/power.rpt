@@ -1,0 +1,94 @@
+****************************************
+Report : power
+        -significant_digits 2
+Design : top
+Version: S-2021.06-SP5-1
+Date   : Sat Nov  8 12:07:20 2025
+****************************************
+Information: Activity propagation will be performed for scenario func_fast.
+Information: Doing activity propagation for mode 'func' and corner 'fast' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario func_fast (POW-052)
+Infomation: Fast mode activity propagation power.rtl_activity_annotation setup is ignored. Always use accurate mode.
+Information: Running switching activity propagation with 10 threads!
+
+ **** Information : No. of simulation cycles = 6 ****
+Information: The stitching and editing of coupling caps is turned OFF for design 'MotionEstimator:top.design'. (TIM-125)
+Information: Design top has 1495 nets, 0 global routed, 1493 detail routed. (NEX-024)
+Warning: Technology layer 'M4' setting 'pitch' is not valid (NEX-001)
+Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
+Information: The RC mode used is DR for design 'top'. (NEX-022)
+---extraction options---
+Corner: slow
+Corner: fast
+Global options:
+ reference_direction       : use_from_tluplus
+ real_metalfill_extraction : none
+ virtual_shield_extraction : true
+---app options---
+ host.max_cores                   : 10
+ extract.connect_open           : true
+ extract.incremental_extraction : true
+ extract.enable_coupling_cap    : false
+Extracting design: top 
+Information: coupling capacitance is lumped to ground. (NEX-030)
+Information: 1493 nets are successfully extracted. (NEX-028)
+Warning: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 1493, routed nets = 1493, across physical hierarchy nets = 0, parasitics cached nets = 1493, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Mode: func
+Corner: fast
+Scenario: func_fast
+Voltage: 0.88
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1fF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+Warning: Power table extrapolation (extrapolation mode) for port X on cell ZCTSBUF_1520_11 for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.001564 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port X on cell ZCTSBUF_3432_14 for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.002823 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port X on cell ZCTSBUF_2231_12 for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.001564 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port X on cell ZCTSBUF_1274_10 for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.001564 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell pe_u/pe9/Accumulate_reg[0] for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.007114 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell pe_u/pe0/Accumulate_reg[0] for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.002975 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell pe_u/pe0/Accumulate_reg[0] for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.002975 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell pe_u/pe9/Accumulate_reg[7] for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.007095 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port SD on cell pe_u/pe0/Accumulate_reg[7] for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.002537 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell pe_u/pe9/Accumulate_reg[6] for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.007095 (POW-046)
+Note - message 'POW-046' limit (10) exceeded. Remainder will be suppressed.
+Warning: Rise-Fall toggles on pin comp_u/U136/X are impossible given input states; converted to zero toggles. (POW-069)
+Warning: Fall toggles on pin comp_u/motionY_reg[3]/QN are impossible given input states; converted to rise toggles. (POW-069)
+
+  Cell Internal Power    = 8.30e+07 pW ( 62.7%)
+  Net Switching Power    = 4.94e+07 pW ( 37.3%)
+Total Dynamic Power      = 1.32e+08 pW (100.0%)
+
+Cell Leakage Power       = 2.88e+07 pW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             6.34e+07               2.24e+07               4.68e+05               8.63e+07    ( 53.5%)        i
+register                  7.89e+06               5.21e+06               1.25e+07               2.56e+07    ( 15.9%)         
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+combinational             1.17e+07               2.18e+07               1.58e+07               4.93e+07    ( 30.6%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     8.30e+07 pW            4.94e+07 pW            2.88e+07 pW            1.61e+08 pW
+1
