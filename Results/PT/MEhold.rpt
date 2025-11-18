@@ -1,0 +1,42 @@
+Information: Building multi voltage information for entire design. (MV-022)
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-max_paths 1
+	-sort_by slack
+Design : top
+Version: S-2021.06-SP4
+Date   : Sat Nov  8 22:10:22 2025
+****************************************
+
+
+  Startpoint: start (input port clocked by ideal_clock1)
+  Endpoint: ctl_u/count_reg[3]
+               (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                          0.00       0.00
+  clock network delay (ideal)                             0.02       0.02
+  input external delay                                    0.00       0.02 r
+  start (in)                                              0.00 &     0.02 r
+  ctl_u/count_reg[3]/SI (SAEDRVT14_FSDPQ_V2LP_0P5)        0.00 &     0.02 r
+  data arrival time                                                  0.02
+
+  clock ideal_clock1 (rise edge)                          0.00       0.00
+  clock network delay (propagated)                        0.01       0.01
+  clock reconvergence pessimism                           0.00       0.01
+  ctl_u/count_reg[3]/CK (SAEDRVT14_FSDPQ_V2LP_0P5)                   0.01 r
+  library hold time                                       0.00       0.02
+  data required time                                                 0.02
+  ------------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                 -0.02
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
