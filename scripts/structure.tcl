@@ -22,4 +22,6 @@ if {$STRUCT eq "true"} {
 	} else {
 	set_structure $STRUCT -design $DESIGN -boolean $BOOL
 	}	
+} else {
+	return 
 }
