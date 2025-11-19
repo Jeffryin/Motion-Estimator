@@ -18,6 +18,7 @@ if {$STRUCT eq "true"} {
 	gets stdin TIME
 
 	if {$TIME eq "true"} {
+		# Synopsys only recognized true or false for the boolean argument instead of low medium high
 		set_structure $STRUCT -design $DESIGN -boolean $BOOL -timing $TIME
 	} else {
 	set_structure $STRUCT -design $DESIGN -boolean $BOOL
