@@ -1,6 +1,6 @@
 #set_flatten <true | false> -design <list of designs> -effort <low | medium | high> -phase <true | false>
 
-puts -nonewline "Would you like to flatten? [true false]"
+puts -nonewline "Would you like to flatten? true or false: "
 flush stdout 
 gets stdin FLAT
 
@@ -9,7 +9,7 @@ if {$FLAT eq "true"} {
 	flush stdout 
 	gets stdin DESIGN
 
-	puts -nonewline "Effort level [low medium high]"
+	puts -nonewline "Effort level low medium high: "
 	flush stdout
 	gets stdin EFFORT
 
@@ -18,7 +18,7 @@ if {$FLAT eq "true"} {
 	gets stdin PHASE
 
 	if {$PHASE eq "yes"} {
-		set_flatten $FLAT -design $DESIGN -effort $EFFORT -phase $PHASE
+		set_flatten $FLAT -design $DESIGN -effort $EFFORT -phase true
 	}
 
 	if {$PHASE eq "no"} {
