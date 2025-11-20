@@ -8,13 +8,25 @@ source setup.tcl
 set power "VDD"
 set ground "VSS"
 
-create_lib -ref_libs $NDM_REFERENCE_LIB_DIRS_MVT -technology $TECH_FILE MotionEstimator
+puts -nonewline "Enter name for block: "
+flush stdout
+gets stdin BLOCK
+create_lib -ref_libs $NDM_REFERENCE_LIB_DIRS_MVT -technology $TECH_FILE $BLOCK
 
 read_parasitic_tech -tlup $TLUPLUS_MAX_FILE  -layermap  $MAP_FILE -name tlup_max
 read_parasitic_tech -tlup $TLUPLUS_MIN_FILE  -layermap  $MAP_FILE -name tlup_min
 
-set TOP_DESIGN top
-set gate_verilog "/home/920528346/outputs/3846MH.v" 
+puts -nonewline "Enter top design: "
+flush stdout 
+gets stdin top
+
+set TOP_DESIGN $top
+
+puts -nonewline "Enter netlist file including file path: "
+flush stdout 
+gets stdin file
+
+set gate_verilog $file
 
 read_verilog -top $TOP_DESIGN $gate_verilog
 
