@@ -7,17 +7,25 @@ place_pins -ports [get_ports *]
 create_net -power VDD
 create_net -ground VSS
 
+puts -nonewline "Is the design single hier, hier, or mixed: "
+flush stdout 
+gets stidn DES
+
 #For design with single level hierarchy
-connect_pg_net -net VDD [get_pins -physical_context *VDD]
-connect_pg_net -net VSS [get_pins -hierarchical *VSS]
+if {$DES eq "single"} {
+	connect_pg_net -net VDD [get_pins -physical_context *VDD]
+	connect_pg_net -net VSS [get_pins -hierarchical *VSS]
+}
 
 ##For design with hierarchy:
 
-#connect_pg_net -net VDD [get_pins -hierarchical */VDD]
-
-#connect_pg_net -net VSS [get_pins -hierarchical */VSS]
+if {$DES eq "hier"} {
+	connect_pg_net -net VDD [get_pins -hierarchical */VDD]
+	connect_pg_net -net VSS [get_pins -hierarchical */VSS]
+}
 
 #OR, use the below two commands for both above cases.
-#resolve_pg_nets
-#connect_pg_net -automatic
-
+if {$DES eq "mixed"} {
+	resolve_pg_nets
+	connect_pg_net -automatic
+}
