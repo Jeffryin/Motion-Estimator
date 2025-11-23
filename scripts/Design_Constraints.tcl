@@ -31,7 +31,10 @@ flush stdout
 gets stdin TOUCH 
 
 if {$TOUCH eq "yes"} {
-	set_dont_touch current_design
+	puts -nonewline "Enter components: "
+	flush stdout
+	gets stdin cmp
+	set_dont_touch $cmp
 }
 
 puts -nonewline "Set input delay? y/n: "
@@ -62,7 +65,7 @@ flush stdout
 gets stdin MD
 
 if {$MD eq "yes"} {
-	set_max_delay 5 -from all_inputs() - to_all_outputs()
+	set_max_delay 5 -from [all_inputs] -to [all_outputs]
 }
 
 puts -nonewline "set minimum delay? y/n: "
@@ -70,5 +73,5 @@ flush stdout
 gets stdin MinD
 
 if {$MinD eq "yes"} {
-	set_max_delay 3 -from all_inputs() - to_all_outputs()
+	set_max_delay 3 -from [all_inputs] -to [all_outputs]
 }
