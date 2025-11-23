@@ -29,6 +29,7 @@ gets stdin Output_Name
 write_sdc ./outputs/$Output_Name.sdc
 write –f ddc –hierarchy –output ./outputs/$Output_Name.ddc
 write -hierarchy -format verilog -output ./outputs/$Output_Name.v
+write_svf ./outputs/$Output_Name.svf
 
 report_area > reports/${Output_Name}_synth_area.rpt
 report_design > reports/${Output_Name}_synth_design.rpt
