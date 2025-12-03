@@ -47,9 +47,6 @@ After verification of the RTL code, the design is taken to the ASIC flow startin
 ### Design Methodology and Engineering Practices 
 
 ### Motion Estimation Algorithm Inisights 
-  
-During the physical design process, learned how to do the following 
-- Create a floorplan to map the logical description of the design to the physical description.
 
 ### Side Note:
 This project is for the Advanced Digital Design class taken in San Francisco State University, and most directories are from the school server. Whatever is posted in this repository is work that I've accomplished by myself and with the help of other classmates if applicable. 
