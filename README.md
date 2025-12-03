@@ -37,16 +37,32 @@ After verification of the RTL code, the design is taken to the ASIC flow startin
 
 ## Things Learned in the Process
 ### RTL Design and Verification
+- Used Verdi to verify the functionality of the RTL design using Verilog testbenches to visualize waveforms and trace signals.
+- Identified bugs and issues where modules didn't produce an expected outcome, then debugged and resolved the RTL file.
+- Developing a testbench that intoduces random stimulus utilizing SystemVerilog to compare the DUT output with a reference model output. 
 
 ### Synthesis and Timing (Synopsys Design Compiler) 
+- Learned how to write and apply SDC constraints by automating the process with tcl scripts.
+- Performed Iterative timing closures by doing the following:
+  - Control hierarchy by flattening and structuring the design.
+  - Exploring different timing strategies.
+- Interpreted setup and hold times to address any violations or to tighten the timing by lowering the timing slack.
+- Understood how Synthesis Optimizations control area, delay and power.
 
 ### Physical Design (IC Compiler II)
+- Created initial floorplan.
+- Apply clock tree synthesis, routing, and placement.
+- 
 
 ### Static Timing Analysis (Primetime) 
+- Run pre and post timing checks.
+  - Apply ECO if the post timing check didn't pass.
+- Used Primetime to analyze critical paths and interpret detailed timing breakdowns.
 
 ### Design Methodology and Engineering Practices 
-
-### Motion Estimation Algorithm Inisights 
+- Gained experience with how the whole ASIC flow - from RTL to post-layout timing.
+- Improved skills in reading lgos, debugging constraints, and analyzing synthesis/STA reports.
+- Strengthened the understanding of project documentation and reproducible design scripts using tcl scripts.
 
 ### Side Note:
 This project is for the Advanced Digital Design class taken in San Francisco State University, and most directories are from the school server. Whatever is posted in this repository is work that I've accomplished by myself and with the help of other classmates if applicable. 
