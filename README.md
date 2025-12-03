@@ -36,11 +36,17 @@ After verification of the RTL code, the design is taken to the ASIC flow startin
 - ICCompiler II (Physical Design)
 
 ## Things Learned in the Process
-During the synthesis phase of homework assignments and the project, learned how to do the following utilizing Synopsys Design Compiler (DC):
-- Utilize Verdi to test the functionality of the RTL code by running testbenches and generating waveforms.
-- Adjust clock periods in order to get the fastest possible speed for the design.
-- Add constraints to the design to fix setup/hold time violations when present.
-- Flatten or keep the hierarchy for certain modules to improve the timing of the overall design.
+### RTL Design and Verification
+
+### Synthesis and Timing (Synopsys Design Compiler) 
+
+### Physical Design (IC Compiler II)
+
+### Static Timing Analysis (Primetime) 
+
+### Design Methodology and Engineering Practices 
+
+### Motion Estimation Algorithm Inisights 
   
 During the physical design process, learned how to do the following 
 - Create a floorplan to map the logical description of the design to the physical description.
