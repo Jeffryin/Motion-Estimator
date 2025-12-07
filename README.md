@@ -26,6 +26,7 @@ After verification of the RTL code, the design is taken to the ASIC flow startin
 
 ## Language Used 
 - Verilog
+- SystemVerilog
 - tcl
 
 ## Tools Used
@@ -52,7 +53,6 @@ After verification of the RTL code, the design is taken to the ASIC flow startin
 ### Physical Design (IC Compiler II)
 - Created initial floorplan.
 - Apply clock tree synthesis, routing, and placement.
-- 
 
 ### Static Timing Analysis (Primetime) 
 - Run pre and post timing checks.
