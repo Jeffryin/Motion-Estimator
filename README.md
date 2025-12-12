@@ -53,10 +53,11 @@ After verification of the RTL code, the design is taken to the ASIC flow startin
 ### Physical Design (IC Compiler II)
 - Created initial floorplan.
 - Apply clock tree synthesis, routing, and placement.
+- Run DRC checks to see if the final physical design is equivalent to that of the initial RTL design. 
 
 ### Static Timing Analysis (Primetime) 
 - Run pre and post timing checks.
-  - Apply ECO if the post timing check didn't pass.
+  - Apply ECO if the post timing check didn't pass. Turn the ECO into an script that the ICC2 shell can run. 
 - Used Primetime to analyze critical paths and interpret detailed timing breakdowns.
 
 ### Design Methodology and Engineering Practices 
