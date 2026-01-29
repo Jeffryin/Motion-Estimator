@@ -22,6 +22,24 @@ After verification of the RTL code, the design is taken to the ASIC flow startin
 
 #### This photo was from the PrimeTime User Guide which covers most of the process 
 
+## Navigating the Repository
+
+### Code
+
+This will include things like the RTL Verilog implementation of the design keeping in mind of design specifications. Note there will be a couple of verilog/SystemVerilog files that are testbenches, these are before implementing self-checks, random stimilus, drivers, and etc. getting closer to UVM. 
+
+#### Testbench
+
+This will include SystemVerilog files that will be utilized for the drivers, interface, generator, transaction, environment and test classes. This will be to help understand UVM and it's process of doing so. 
+
+### Results
+
+This will include results of the design of the motion estimator. Results include timing outputs when ran in Primetime, gate level netlist, etc.
+
+### Scripts 
+
+This will include tcl files that were used to help automate the whole process from RTL design to physical design of the chip.
+
 ## References
 
 ## Language Used 
