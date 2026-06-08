@@ -17,8 +17,8 @@ The design is to minimize the total area and energy consumed by the logic over t
 
 
 ## Verification Plan
-Several test benches in Verilog will be developed with known vectors as well as random stimulus. These test benches will be applied to the design and the results will be compared against expected outcomes. The expected outcomes will be produced using a reference model or manually and compared against the outcomes produced by the design under test. 
-
+Create an object-oriented style based testbench to test the functionality of the Motion Estimator. The testbench will consist of an environment, generator, interface, monitor, scoreboard, transaction, other classes and mailboxes used to connect all of it. I will introduce constrained randomly generated stimulus and be looking to test for best distortion hits to be a 'perfect_match', 'near_match' or 'no_match'. 
+Future work for verification will be to include SVA (SystemVerilog Assertions) and convert this OOP-style based verification to be UVM-style. 
 
 ## Design Plan
 After verification of the RTL code, the design is taken to the ASIC flow starting with front-end synthesis and timing check, followed by back-end physical design involving placement, clock-tree synthesis, and routing. The parasitics will be extracted from layout for final timing check using prime-time. Efforts will be made to improve the design in terms of power consumption and area, while meeting the timing.
