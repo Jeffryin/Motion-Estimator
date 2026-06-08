@@ -3,6 +3,13 @@ ASIC implementation of a motion estimator
 
 <img width="637" height="633" alt="Screenshot 2025-11-08 at 1 22 54 PM" src="https://github.com/user-attachments/assets/1af897f4-7912-46bf-afc0-444fa741a655" />
 
+## Navigation of GitHub repository
+
+### Verification 
+Go to `Code` -> `Testbench` and here you find all the respective systemverilog files used to create an object-oriented programming testbench. Some future work regarding verification will be to include assertions and to convert this into UVM style-based verification. 
+
+### Physical Design
+Go to `Code` and you will find all the modules used to create the Motion Estimator. To find results and findings go to `Results` to see outputs such as setup and hold timing reports. 
 
 ## Design Specifications
 The design is expected to meet the speed of 15 frames per second. The picture is gray-scale coded ( 8 bits per block). The reference block is 16 x 16 pixels and the search window is 31 x 31 pixels. There are 4096 reference blocks in a frame. 
